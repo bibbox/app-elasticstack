@@ -9,7 +9,7 @@
     {
       "id": "§§PORT2",
       "url": "§§INSTANCE-logstash",
-      "protocol": "TCP",
+      "protocol": "HTTP",
       "proxy" : "PRIMARY"
     },
     {
@@ -21,7 +21,7 @@
     {
       "id": "§§PORT4",
       "url": "§§INSTANCE-eltcp",
-      "protocol": "TCP",
+      "protocol": "HTTP",
       "proxy" : "PRIMARY"
     }
   ]
