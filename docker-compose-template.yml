@@ -3,20 +3,25 @@ services:
 
   §§INSTANCE-elasticsearch:
     image: elasticsearch
+    container_name: §§INSTANCE-elasticsearch
     ports:
       - "§§PORT3:9200"
       - "§§PORT4:9300"
     environment:
       ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+      
   §§INSTANCE-logstash:
     image: logstash
+    container_name: §§INSTANCE-logstash
     command: -f /etc/logstash/conf.d/
     ports:
       - "§§PORT2:5000"
     depends_on:
       - §§INSTANCE-elasticsearch
+      
   §§INSTANCE-kibana:
     image: kibana
+    container_name: §§INSTANCE-kibana
     ports:
       - "§§PORT1:5601"
     depends_on:
