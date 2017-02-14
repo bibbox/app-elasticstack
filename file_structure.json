@@ -1,6 +1,7 @@
 {
   "makefolders":[
-    "var/lib/mysql",
+    "var/lib/logstash/config",
+    "var/lib/kibana/config"
   ],
   "copyfiles":[]
 }

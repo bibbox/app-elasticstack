@@ -32,4 +32,4 @@ services:
     container_name: DDD-elasticstack-data
     volumes:
       - ./var/lib/logstash/config:/etc/logstash/conf.d
-      - ./var/lib/kibana/config/:/etc/kibana/
+      - ./var/lib/kibana/config:/etc/kibana/
