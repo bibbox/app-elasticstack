@@ -1,4 +1,4 @@
-## MyCollab Installation Instructions 
+## Elastic Search Installation Instructions 
 
 
 
