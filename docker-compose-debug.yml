@@ -1,0 +1,35 @@
+version: '2'
+services:
+
+  DDD-elasticsearch:
+    image: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+      
+      
+      
+  DDD-logstash:
+    image: logstash
+    command: -f /etc/logstash/conf.d/
+    ports:
+      - "5000:5000"
+    depends_on:
+      - DDD-elasticsearch
+      
+      
+  DDD-kibana:
+    image: kibana
+    ports:
+      - "5601:5601"
+    depends_on:
+      - DDD-elasticsearch
+      
+  DDD-elasticstack-data:
+    image: busybox
+    container_name: DDD-elasticstack-data
+    volumes:
+      - ./var/lib/logstash/config:/etc/logstash/conf.d
+      - ./var/lib/kibana/config/:/etc/kibana/
