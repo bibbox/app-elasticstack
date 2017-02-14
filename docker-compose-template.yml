@@ -22,8 +22,8 @@ services:
   §§INSTANCE-kibana:
     image: kibana
     container_name: §§INSTANCE-kibana
-    links:
-      - §§INSTANCE-elasticsearch:elasticsearch
+    # links:
+      # - §§INSTANCE-elasticsearch:elasticsearch
     ports:
       - "§§PORT1:5601"
     depends_on:
