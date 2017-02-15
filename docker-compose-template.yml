@@ -33,5 +33,5 @@ services:
     image: busybox
     container_name: §§INSTANCE-elasticstack-data
     volumes:
-      - ./images/logstash/config:/etc/logstash/conf.d
-      - ./var/lib/kibana/config/:/etc/kibana/
+      - ./config/logstash:/etc/logstash/conf.d
+      - ./config/kibana:/etc/kibana
