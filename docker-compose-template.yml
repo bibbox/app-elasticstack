@@ -20,7 +20,7 @@ services:
       - §§INSTANCE-elasticsearch
       - §§INSTANCE-elasticstack-data
     volumes_from: 
-      - §§INSTANCE-elasticsearch-data
+      - §§INSTANCE-elasticstack-data
       
   §§INSTANCE-kibana:
     image: kibana
@@ -33,7 +33,7 @@ services:
       - §§INSTANCE-elasticsearch
       - §§INSTANCE-elasticstack-data
     volumes_from: 
-      - §§INSTANCE-elasticsearch-data
+      - §§INSTANCE-elasticstack-data
       
   §§INSTANCE-elasticstack-data:
     image: busybox
