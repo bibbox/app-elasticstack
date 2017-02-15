@@ -1,7 +1,16 @@
 {
   "makefolders":[
-    "var/lib/logstash/config",
-    "var/lib/kibana/config"
+    "var/config/logstash",
+    "var/config/kibana"
   ],
-  "copyfiles":[]
+  "copyfiles":[
+    {
+        "source":"config/logstash",
+        "destination":"var/config/logstash"
+    },
+    {
+        "source":"config/kibana",
+        "destination":"var/config/kibana"
+    }
+  ]
 }
