@@ -5,12 +5,12 @@
   ],
   "copyfiles":[
     {
-        "source":"config/logstash",
-        "destination":"var/config/logstash"
+        "source":"config/logstash/logstash.conf",
+        "destination":"var/config/logstash/logstash.conf"
     },
     {
-        "source":"config/kibana",
-        "destination":"var/config/kibana"
+        "source":"config/kibana/kibana.yml",
+        "destination":"var/config/kibana/kibana.yml"
     }
   ]
 }
