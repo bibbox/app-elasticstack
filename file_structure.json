@@ -1,16 +1,16 @@
 {
-  "makefolders":[
-    "var/config/logstash",
-    "var/config/kibana"
-  ],
-  "copyfiles":[
-    {
-        "source":"config/logstash/logstash.conf",
-        "destination":"var/config/logstash/logstash.conf"
-    },
-    {
-        "source":"config/kibana/kibana.yml",
-        "destination":"var/config/kibana/kibana.yml"
-    }
-  ]
+    "makefolders":[
+        "var/config/logstash",
+        "var/config/kibana"
+    ],
+    "copyfiles":[
+        {
+            "source":"config/logstash/logstash.conf",
+            "destination":"var/config/logstash/logstash.conf"
+        },
+        {
+            "source":"config/kibana/kibana.yml",
+            "destination":"var/config/kibana/kibana.yml"
+        }
+    ]
 }

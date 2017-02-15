@@ -13,7 +13,7 @@ services:
   §§INSTANCE-logstash:
     image: logstash
     container_name: §§INSTANCE-logstash
-    command: logstash -f /etc/logstash/conf.d/logstash.conf
+    # command: logstash -f /etc/logstash/conf.d/logstash.conf
     ports:
       - "§§PORT2:5000"
     depends_on:
@@ -34,4 +34,4 @@ services:
     container_name: §§INSTANCE-elasticstack-data
     volumes:
       - ./var/config/logstash:/etc/logstash/conf.d
-      - ./var/config/kibana:/etc/kibana
+      - ./var/config/kibana:/opt/kibana/config
