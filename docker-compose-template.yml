@@ -13,7 +13,7 @@ services:
   §§INSTANCE-logstash:
     image: logstash
     container_name: §§INSTANCE-logstash
-    command: -f /etc/logstash/conf.d/
+    command: -f /etc/logstash/conf.d/logstash.conf
     ports:
       - "§§PORT2:5000"
     depends_on:
