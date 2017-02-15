@@ -13,6 +13,8 @@ services:
   §§INSTANCE-logstash:
     image: logstash
     container_name: §§INSTANCE-logstash
+    links:
+      - §§INSTANCE-elasticsearch:elasticsearch
     command: logstash -f /etc/logstash/conf.d/logstash.conf
     ports:
       - "§§PORT2:5000"
