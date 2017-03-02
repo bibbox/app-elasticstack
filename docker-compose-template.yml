@@ -10,6 +10,8 @@ services:
     image: elasticsearch
     container_name: §§INSTANCE-elasticsearch
     restart: unless-stopped
+    networks:
+      - bibbox-default-network
     ports:
       - "§§PORT3:9200"
       - "§§PORT4:9300"
@@ -20,6 +22,8 @@ services:
     image: logstash
     container_name: §§INSTANCE-logstash
     restart: unless-stopped
+    networks:
+      - bibbox-default-network
     links:
       - §§INSTANCE-elasticsearch:elasticsearch
     command: logstash -f /etc/logstash/conf.d/logstash.conf
@@ -35,6 +39,8 @@ services:
     image: kibana
     container_name: §§INSTANCE-kibana
     restart: unless-stopped
+    networks:
+      - bibbox-default-network
     links:
       - §§INSTANCE-elasticsearch:elasticsearch
     ports:
@@ -48,6 +54,8 @@ services:
   §§INSTANCE-elasticstack-data:
     image: busybox
     container_name: §§INSTANCE-elasticstack-data
+    networks:
+      - bibbox-default-network
     volumes:
       - ./var/config/logstash:/etc/logstash/conf.d
       - ./var/config/kibana:/opt/kibana/config
