@@ -1,10 +1,11 @@
 {
-		"name": "Elastic Stack x.x.x",
-		"short_name": "Elastic Stack",
-		"version": "vx.x.x",
-		"description": "",
+	"name": "Elastic Stack x.x.x",
+	"short_name": "Elastic Stack",
+	"version": "vx.x.x",
+	"description": "",
         "short_description": "Indexing Software",
-		"catalogue_url": "",
-		"application_url": "https://www.elastic.co/",
-		"tags": ["Indexing"]
+	"catalogue_url": "",
+	"application_url": "https://www.elastic.co/",
+	"tags": ["Indexing"],
+	"application_documentation_url": "https://www.elastic.co/guide/index.html"
 }
