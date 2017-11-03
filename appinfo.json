@@ -1,8 +1,8 @@
 {
-	"name": "Elastic Stack x.x.x",
+	"name": "Elastic Stack 6.0.0 RC2",
 	"short_name": "Elastic Stack",
-	"version": "vx.x.x",
-	"description": "",
+	"version": "6.0.0 RC2",
+	"description": "Version 6.0 Release Candidate 2",
         "short_description": "Indexing Software",
 	"catalogue_url": "",
 	"application_url": "https://www.elastic.co/",
