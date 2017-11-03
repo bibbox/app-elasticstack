@@ -1,4 +1,4 @@
 {
-  runningcontainers:["§§INSTANCE-elasticsearch", "§§INSTANCE-logstash", "§§INSTANCE-kibana"],
+  runningcontainers:["§§INSTANCE-elasticsearch", "§§INSTANCE-kibana"],
   supportcontainers:["§§INSTANCE-elasticstack-data"]
 }
