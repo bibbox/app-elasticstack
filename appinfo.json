@@ -2,7 +2,7 @@
 	"name": "Elastic Stack 6.0.0 RC2",
 	"short_name": "Elastic Stack",
 	"version": "6.0.0 RC2",
-	"description": "Version 6.0 Release Candidate 2",
+	"description": "version [6.0.0-rc2] is a pre-release version of Elasticsearch and is not suitable for production",
         "short_description": "Indexing Software",
 	"catalogue_url": "",
 	"application_url": "https://www.elastic.co/",

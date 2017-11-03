@@ -8,12 +8,6 @@
     },
     {
       "id": "§§PORT2",
-      "url": "§§INSTANCE-logstash",
-      "protocol": "HTTP",
-      "proxy" : "PRIMARY"
-    },
-    {
-      "id": "§§PORT3",
       "url": "§§INSTANCE-el",
       "protocol": "HTTP",
       "proxy" : "PRIMARY"

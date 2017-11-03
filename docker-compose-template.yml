@@ -13,32 +13,16 @@ services:
     networks:
       - bibbox-default-network
     ports:
-      - "§§PORT3:9200"
-      - "§§PORT4:9300"
+      - "§§PORT2:9200"
+      - "§§PORT3:9300"
     environment:
       ES_JAVA_OPTS: "-Xms1g -Xmx1g"
     volumes_from:
       - §§INSTANCE-elasticstack-data
       
-  §§INSTANCE-logstash:
-    image: logstash
-    container_name: §§INSTANCE-logstash
-    restart: unless-stopped
-    networks:
-      - bibbox-default-network
-    links:
-      - §§INSTANCE-elasticsearch:elasticsearch
-    command: logstash -f /etc/logstash/conf.d/logstash.conf
-    ports:
-      - "§§PORT2:5000"
-    depends_on:
-      - §§INSTANCE-elasticsearch
-      - §§INSTANCE-elasticstack-data
-    volumes_from: 
-      - §§INSTANCE-elasticstack-data
-      
+
   §§INSTANCE-kibana:
-    image: kibana
+    image: docker.elastic.co/kibana/kibana:6.0.0-rc2
     container_name: §§INSTANCE-kibana
     restart: unless-stopped
     networks:
