@@ -13,7 +13,7 @@
       "proxy" : "PRIMARY"
     },
     {
-      "id": "§§PORT4",
+      "id": "§§PORT3",
       "url": "§§INSTANCE-eltcp",
       "protocol": "HTTP",
       "proxy" : "PRIMARY"
