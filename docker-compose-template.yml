@@ -44,5 +44,5 @@ services:
       - bibbox-default-network
     volumes:
       - ./data:/usr/share/elasticsearch/data
-      - ./var/config/logstash:/etc/logstash/conf.d
+      - ./var/config/elasticsearch:/etc/elasticsearch/config
       - ./var/config/kibana:/opt/kibana/config
