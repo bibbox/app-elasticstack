@@ -1,8 +1,8 @@
 {
-	"name": "Elastic Stack 6.0.0 RC2",
+	"name": "Elastic Stack 8.1.0",
 	"short_name": "Elastic Stack",
-	"version": "6.0.0 RC2",
-	"description": "version [6.0.0-rc2] is a pre-release version of Elasticsearch and is not suitable for production",
+	"version": "8.1.0 RC2",
+	"description": "version [8.1.0] release version of Elasticsearch",
         "short_description": "Indexing Software",
 	"catalogue_url": "",
 	"application_url": "https://www.elastic.co/",

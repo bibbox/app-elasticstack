@@ -1,0 +1,51 @@
+version: "3"
+networks:
+  bibbox-default-network:
+    external: true
+services:
+  §§INSTANCE-elasticsearch:
+    container_name: §§INSTANCE-elasticsearch
+    environment:
+      - node.name=§§INSTANCE-elasticsearch
+      - cluster.initial_master_nodes=§§INSTANCE-elasticsearch
+      - ELASTIC_PASSWORD=§§ELASTIC_PASSWORD_ENV
+      - bootstrap.memory_lock=false
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.1.0
+    networks:
+    - bibbox-default-network
+    ports:
+    - 9300:9300
+    restart: unless-stopped
+    volumes:
+    - ./data:/usr/share/elasticsearch/data
+    - ./config/logstash:/etc/logstash/conf.d
+  
+  §§INSTANCE-kibana:
+    container_name: §§INSTANCE-kibana
+    depends_on:
+    - "§§INSTANCE-elasticsearch"
+    image: docker.elastic.co/kibana/kibana:8.1.0
+    links:
+    - "§§INSTANCE-elasticsearch:elasticsearch"
+    networks:
+    - bibbox-default-network
+    environment:
+      - SERVERNAME=kibana
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=§§ELASTIC_USER_ENV
+      - ELASTICSEARCH_PASSWORD=§§ELASTIC_PASSWORD_ENV
+    ports:
+    - 5601:5601
+    proxy:
+      DISPLAYNAME: APP name
+      TEMPLATE: default
+      TYPE: PRIMARY
+      URLPREFIX: §§INSTANCE
+    restart: unless-stopped
+    volumes:
+    - ./data:/usr/share/elasticsearch/data
+    - ./config/logstash:/etc/logstash/conf.d
+
